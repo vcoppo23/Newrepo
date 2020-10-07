@@ -17,10 +17,7 @@ while n < 775147:
     n += 1
     if 600851475143 % n == 0:
         if n % 2 != 0:
-            #print (sieve(n))
             if sieve(n) == True:
                 primelist.append(n)
-                #print (n)
-            
 
 print (max(primelist))

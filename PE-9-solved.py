@@ -7,7 +7,6 @@
 # Variables
 upper = 999
 lower = 200
-
 for a in range(lower,upper):
     for b in range(lower, upper):
         for c in range(lower, upper):
@@ -15,4 +14,4 @@ for a in range(lower,upper):
                 if a**2 + b**2 == c**2:
                     if a + b + c == 1000:
                         print ("the triplets are",a,b,c,"the product is:", a * b * c)
-                        
+             

@@ -6,11 +6,19 @@
 # Variables
 
 add = 0
+z = True
+y = True
+while y == True :
+    divisor = 0
+    for i in range(1, 100000000):
+        add += i
+        print (add)
+        #print (i, z, add, divisor)
+        if add / i == int(add / i):
+           divisor += 1
 
-def tri_nums(n):
-    add += n
-    return add
-
-
-
-print (tri_nums(range(1,7)))
+        if divisor == 500:
+            print (i)
+            y = False
+                
+                

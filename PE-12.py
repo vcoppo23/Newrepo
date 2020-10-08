@@ -4,21 +4,22 @@
 
 
 # Variables
+import math
+add = 1
+multiples = []
 
-add = 0
-z = True
-y = True
-while y == True :
-    divisor = 0
-    for i in range(1, 100000000):
-        add += i
-        print (add)
-        #print (i, z, add, divisor)
-        if add / i == int(add / i):
-           divisor += 1
 
-        if divisor == 500:
-            print (i)
-            y = False
-                
-                
+
+
+
+def factors(x):
+    for n in range(1, x + 1):
+        if x % n == 0:
+            return x
+        else:
+            return None
+for i in range(7):
+    add += i
+    print (add - 1)
+    multiples.append(factors(add))
+    print(multiples)

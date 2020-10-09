@@ -1,33 +1,25 @@
-# Project Euler Problem #12 
+# Project Euler Problem #12 - Val Coppo
 # Highly divisible Triangle Number
 # What is the value of the first triangle number to have over five hundred divisors?
 
 
 # Variables
-import math
+from functools import reduce
+from math import sqrt
 add = 0
 i = 0
 
-
-def multiple_counter(n):
-    x = 0
-    for i in range(1,int(math.sqrt(n))):
-        if n % i == 0:
-            x += 1
-    return x + 3
-
+factors = lambda n: {f for i in range(1, int(n**0.5)+1) if n % i == 0 for f in [i, n//i]}
 
 def tri_num(m):
     t = m*(m+1)/2
-    return multiple_counter(t)
+    return len(factors(t))
 
 def tri_num_check(b):
     return b*(b+1)/2
 
 
-while tri_num(add) < 100:
-    #print (tri_num(add), tri_num_check(add))
+while tri_num(add) < 500:
     tri_num(add)
     add += 1
 print (tri_num_check(add))
-print (multiple_counter(64))

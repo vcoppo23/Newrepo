@@ -5,23 +5,20 @@
 # Variables
 
 primelist = []
-
+import math
 x = 10001
 n = 1
 
-while x > 0:
-    
-    if n >= 1:  
-       for i in range(2, n//2): 
-           if (n % i) == 0: 
-               break
-       else: 
-           primelist.append(n)
-           x -= 1
-  
-    else: 
-       pass 
-    n += 2
-    
-print (primelist[-1])
 
+def prime_check(n):
+    sqrt = int(math.sqrt(n))
+    for i in range(2, sqrt - 1):
+        if n % i == 0:
+            return None
+            break
+    return True
+
+print (prime_check(10))
+while x > 0:
+    if prime_check(x) == False:
+        pass

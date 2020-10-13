@@ -5,7 +5,7 @@
 
 #variables
 a = True
-x = 2520# smallest multiple of 1-10
+x = 2520      # smallest multiple of 1-10
 
 while a == True:
     if x % 19 == 0 and x % 18 == 0 and x % 17 == 0 and x % 16 == 0 and x % 15 == 0 and x % 14 == 0 and x % 13 == 0 and x % 12 == 0 and x % 11 == 0:

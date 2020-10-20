@@ -10,17 +10,18 @@ y = 1
 n = 0
 
 def sieve(x):
-    for i in range (2, x - 1):
+    sqrt = int(math.sqrt(x))
+    for i in range (2, sqrt):
         if x % i == 0:
             return False
     return x
 
 
-while n <= 100:
+while n <= 10005:
     #print (sieve(y))
     if sieve(y) != False:
         primelist.append(sieve(y))
         n += 1
     y += 2
     
-print (primelist[99])
+print (primelist[10001])

@@ -6,19 +6,21 @@
 
 primelist = []
 import math
-x = 10001
-n = 1
+y = 1
+n = 0
+
+def sieve(x):
+    for i in range (2, x - 1):
+        if x % i == 0:
+            return False
+    return x
 
 
-def prime_check(n):
-    sqrt = int(math.sqrt(n))
-    for i in range(2, sqrt - 1):
-        if n % i == 0:
-            return None
-            break
-    return True
-
-print (prime_check(10))
-while x > 0:
-    if prime_check(x) == False:
-        pass
+while n <= 100:
+    #print (sieve(y))
+    if sieve(y) != False:
+        primelist.append(sieve(y))
+        n += 1
+    y += 2
+    
+print (primelist[99])

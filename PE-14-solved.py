@@ -19,12 +19,11 @@ def coltez(n):         # This it the Collatz function, it does the bulk of the w
         return 1
     if n % 2 == 0:
 
-       # print (n)
         return coltez(n // 2)
         
     elif n % 2 != 0:
         
-        #print (n)
+
         return coltez((3*n)+1)
 
 # Checker

@@ -7,6 +7,7 @@
 x = 0
 y = 1
 ans = 0
+
 while x <= 4000000:
     
     y = x + y     #Fibinachi Formula

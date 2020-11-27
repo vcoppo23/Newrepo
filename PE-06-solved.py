@@ -9,10 +9,10 @@ x = 0
 sumlist = []
 sqrlist = []
 
-
+# Just adds to two seperate list and then prints the result
 while n <= 100:
     
-    sumlist.append(n)
+    sumlist.append(n)  
     x = n**2
     sqrlist.append(x)
     n += 1

@@ -6,6 +6,7 @@
 n = 1
 res = 0
 
+# checks if under 1000 then checks if divisible by 3 or 5, if yes then adds it to total
 while n <= 1000:
     if n % 3 == 0 or n % 5 == 0:
         res = res + n

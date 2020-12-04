@@ -18,5 +18,5 @@ for x in range(500,1000):
         y += 1
         
     x += 1
-print (max(palist)) 
+print (palist)
 

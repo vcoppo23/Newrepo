@@ -3,27 +3,28 @@
 # What is the 10 001st prime number?
 
 # Variables
+count = 0
+prime_list = []
+number = 0
 
-primelist = []
-import math
-y = 1
-n = 0
+def prime_check(x):
+    if x == 2:
+        return True
+    elif x % 2 == 0:
+        return False
+    else:
+        for i in range (2, x - 1):
+            if x % i == 0:
+                return False
+        return True
 
-# Prime checker
-def sieve(x):
+while count <= 10001:
     
-    sqrt = int(math.sqrt(x))
-    for i in range (2, sqrt):
-        if x % i == 0:
-            return False
-    return x
+    if prime_check(number):
+        prime_list.append(number)
+        count += 1
+    number +=2
 
-# Checks prime checker and then adds to list if true
-while n <= 10005:
+
     
-    if sieve(y) != False:
-        primelist.append(sieve(y))
-        n += 1
-    y += 2
-    
-print (primelist[10001])
+print (max(prime_list))

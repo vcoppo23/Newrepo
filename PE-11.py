@@ -4,14 +4,18 @@
 
 
 # Variables
-n = 0
-matrixlist = [1,2,3,4,0,0,0,0,5,6,7,8,0,0,0,0,9,10,11,12,0,0,0,0,13,14,15,16,0,0,0,0]
+matrix = """08 02 22 97
+49 49 99 40
+81 49 31 73
+52 70 95 23
+"""
+print (matrix)
+line = matrix.splitlines()
+
+def check(x,y):
+    number_box = line[y].split(" ")
+    print(number_box[x])
+    
 
 
-sqrlist = []
-print (sqrlist)
-for i in range (50):
-    word = "sqrlist.append(matrixlist[range(n + %d )])"
-    letter = str(i)
-    print (word.replace("%d", letter))
-        
+
